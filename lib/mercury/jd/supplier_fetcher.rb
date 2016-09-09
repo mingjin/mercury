@@ -11,20 +11,21 @@ class SupplierFetcher
     
     protocol_prefix = link.attribute('href').start_with?('//') ? 'http:' : ''
     
-    browser.quit
-    
     link_href = protocol_prefix.concat link.attribute('href')
     link_href if link.text.eql? category
+    
+    browser.quit
+    
+    link_href
   end
   
   def fetch_mobile_merchants link, category = '手机'
     browser = Selenium::WebDriver.for :phantomjs
     browser.navigate.to link
     
-    merchants = browser.find_elements(:css, 'ul#brandsArea li a').map do |anchor| 
-      puts anchor
-      anchor.attribute('title')
-    end
+    browser.find_element(:css, 'a.sl-e-more.J_extMore').click
+    sleep 0.5
+    merchants = browser.find_elements(:css, 'ul#brandsArea li a').map {|anchor| anchor.attribute('title')}
     
     browser.quit
     

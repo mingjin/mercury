@@ -7,7 +7,6 @@ describe SupplierFetcher do
   
   it "fetch mobile merchants" do
     merchants = subject.fetch_mobile_merchants 'http://list.jd.com/list.html?cat=9987,653,655', '手机'
-    expect(merchants.size).to be > 100
     expect(merchants).to include '华为（HUAWEI）'
     expect(merchants).to include 'LG'
     expect(merchants).to include '谷歌（Google）'
