@@ -1,7 +1,12 @@
 source 'https://ruby.taobao.org'
 
 gem 'selenium-webdriver'
-gem 'nokogiri'
+
+gem 'sqlite3'
+gem 'standalone_migrations'
+
+gem 'writeexcel'
+
 
 group :development do
   gem 'rake'
