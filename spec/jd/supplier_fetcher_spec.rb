@@ -1,10 +1,7 @@
-require 'selenium-webdriver'
-
 describe SupplierFetcher do
   before(:all) do
     @fetcher = SupplierFetcher.new
-    @browser = Selenium::WebDriver.for :phantomjs
-    @fetcher.browser @browser
+    @fetcher.browser WebDriver.phantomjs
   end
   
   after(:all) do
