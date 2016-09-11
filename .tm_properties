@@ -1,3 +1,3 @@
 TM_RUBY = "$HOME/.rbenv/shims/ruby"
-PATH = "$HOME/.rbenv/bin:./tools/phantomjs-2.1.1-macosx/bin:$PATH"
+PATH = "$HOME/.rbenv/bin:$CWD/tools/phantomjs-2.1.1-macosx/bin:$CWD/tools/chromedriver/bin:$PATH"
 excludeDirectories = "{$excludeDirectories,.git,tmp,vendor,log,tools}"

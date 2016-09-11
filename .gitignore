@@ -1,3 +1,4 @@
 vendor
 tools/phantomjs-2.1.1-macosx
 db/*.sqlite3
+tools/chromedriver/
